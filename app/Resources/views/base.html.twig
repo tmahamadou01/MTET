@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="{{ asset('main.css') }}">
 </head>
 <body>
 {% for type, messages in app.session.flashBag.all %}
@@ -17,9 +18,21 @@
     {% block fos_user_content %}{% endblock %}
 {% endblock %}
 
-<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="#"></script>
+
+{#Ajoute#}
+
+<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+
+<script src="{{ asset('assets/plugin/megamenu/js/hover-dropdown-menu.js') }}"></script>
+<script src="{{ asset('assets/plugin/megamenu/js/jquery.hover-dropdown-menu-addon.js') }}"></script>
+<script src="{{ asset('assets/plugin/owl-carousel/js/owl.carousel.min.js') }}"></script>
+
+
+<script type="text/javascript" src="{{ asset('assets/plugin/counter/js/jquery.countTo.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/plugin/counter/js/jquery.appear.js') }}"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
+
 {% block javascripts %}{% endblock %}
 </body>
 </html>

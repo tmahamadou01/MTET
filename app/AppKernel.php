@@ -19,7 +19,6 @@ class AppKernel extends Kernel
 
             // ...
             new FOS\UserBundle\FOSUserBundle(),
-            // ...,
             new MarmitonBundle\MarmitonBundle(),
         ];
 
