@@ -1,0 +1,4 @@
+services:
+#    marmiton.example:
+#        class: MarmitonBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
