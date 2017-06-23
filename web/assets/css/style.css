@@ -270,7 +270,7 @@ label.radio-label {
     z-index: 9;
     cursor: pointer;
     -webkit-transition: all 0.25s linear;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
 }
 label {
     display: inline-block;
@@ -1574,11 +1574,11 @@ i.input {
     background-color: transparent;
     padding: 0;
 }
-.bredcrumb-section {
-    background-image: url(../img/background/bredcrumb-back.jpg);
+/*.bredcrumb-section {
+    background-image: url(../img/background/diaporama-restaurant-guinguette-03_1000x400.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-}
+}*/
 .bredcrumb-section:after {
     content: "";
     position: absolute;
