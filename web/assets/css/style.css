@@ -31,6 +31,7 @@ body {
 img {
     max-width: 100%;
 }
+
 a {
     text-decoration: none;
     cursor: pointer;
@@ -1229,7 +1230,7 @@ i.input {
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    /*background: rgba(0, 0, 0, 0.5);*/
 }
 /*
 ===================================

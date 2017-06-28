@@ -1,3 +1,5 @@
+{% trans_default_domain 'MarmitonBundle' %}
+
 <!--//================Footer start==============//-->
 <footer class="main_footer">
     <div class="container">
@@ -7,31 +9,29 @@
                     <div class="foot-sec marB30">
                         <h3 class="colorW marB20">Marmiton ?</h3>
                         <p>
-                            Un beau jour de juin 2017, nous avons lancé la première version de Marmiton,
-                            site de partage de recettes, sans volonté autre que celle de fournir un service utile
-                            et sympa.
+                            {{ 'footer.description'|trans }}
                         </p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="foot-sec marB30">
-                        <h3 class="colorW marB20">Contactez nous</h3>
+                        <h3 class="colorW marB20">{{ 'footer.contact'|trans }}</h3>
                         <p>ETNA <br>7 rue Maurice Grandcoing <br>94200 Ivry-sur-Seine</p>
-                        <p>06 06 06 06 06</p>
+                        <p>06 06 06 06 06 <br> info@gmail.com</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="foot-sec marB30">
-                        <h3 class="colorW marB20">Votre compte</h3>
+                        <h3 class="colorW marB20">{{  'footer.compte.compte'|trans }}</h3>
                         <ul class="pad0">
                             <li><a href="{{ path('fos_user_security_login') }}"><i class="fa fa-angle-right marR10" aria-hidden="true"></i>Se connecter</a></li>
-                            <li><a href="{{ path('fos_user_security_login') }}"><i class="fa fa-angle-right marR10" aria-hidden="true"></i>S'inscrire</a></li>
+                            <li><a href="{{ path('fos_user_security_login') }}"><i class="fa fa-angle-right marR10" aria-hidden="true"></i>{{  'footer.compte.s_inscrire'|trans }}</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="foot-sec foot-img-box marB30">
-                        <h3 class="colorW marB20">Gallerie</h3>
+                        <h3 class="colorW marB20">{{  'footer.galerie'|trans }}</h3>
                         <ul class="pad0">
                             <li><a href="#"><img src="assets/img/footer/007-poisson-plat-restaurant-jour-de-marche-lyon-selection.jpg" alt=""/></a></li>
                             <li><a href="#"><img src="assets/img/footer/brasserie.jpg" alt=""/></a></li>
@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="foot-sec marB30">
-                        <h3 class="colorW marB20">Réseaux sociaux</h3>
+                        <h3 class="colorW marB20">{{  'footer.reseaux_sociaux'|trans }}</h3>
                         <ul class="social-icon">
                             <li><a href="https://www.facebook.com/marmiton/?ref=br_rs" class="theme-circle marR10"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                             <li><a href="https://twitter.com/Marmiton_org?lang=fr" class="theme-circle marR10"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -56,7 +56,7 @@
                     <div class="foot-sec marB30">
                         <h3 class="colorW marB20">Newsletter</h3>
                         <form class="search_bar">
-                            <input type="text" name="search" placeholder="Chercher...">
+                            <input type="text" name="search" placeholder= "{{ 'footer.newsletter.chercher'|trans }}" >
                             <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                         </form>
                     </div>

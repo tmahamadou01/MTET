@@ -1,18 +1,20 @@
+{% trans_default_domain 'MarmitonBundle' %}
+
 <!--//================Header start==============//-->
 <header class="positionR">
-    <div class="top-bar padTB30">
+    <div class="top-bar padTB10">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-12">
-                    <a class="navbar-brand" href="index.html">
-                        <img class="site_logo" alt="Site Logo"  src="assets/img/logo.png" />
+                    <a class="navbar-brand" href="{{ path ('marmiton_default_index')}}">
+                        <img class="site_logo" id="logo" alt="Site Logo"  src="assets/img//header/logo.jpg" />
                     </a>
                 </div>
                 <div class="col-md-9 col-sm-9 col-xs-12 hidden-xs">
                     <div class="contact-info pull-right padTB5">
-                        <a href="book-table.html" class="itg-button">Connexion</a>
+                        <a href="{{ path('fos_user_security_login') }}" class="itg-button">Connexion</a>
                     </div>
-                    <div class="contact-info pull-right padTB5">
+{#                    <div class="contact-info pull-right padTB5">
                         <div class="pull-left">
                             <a href="#" class="theme-circle marR10"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                         </div>
@@ -29,7 +31,7 @@
                             <h5>Call us :</h5>
                             <p>+5584925214</p>
                         </div>
-                    </div>
+                    </div>#}
                 </div>
             </div>
         </div>
@@ -45,14 +47,13 @@
                             <div class="row">
                                 <div class="navigation-icon custom-drop">
                                     <ul class="social-icon top-bar-icon">
-                                        <li><a href="#" class="theme-circle marL10"><i class="fa fa-facebook" aria-hidden="true"></i><span>facebook</span></a></li>
-                                        <li><a href="#" class="theme-circle marL10"><i class="fa fa-twitter" aria-hidden="true"></i><span>twitter</span></a></li>
-                                        <li><a href="#" class="theme-circle marL10"><i class="fa fa-google-plus" aria-hidden="true"></i><span>google</span></a></li>
-                                        <li><a href="#" class="theme-circle marL10"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Cart(3)</span></a></li>
+                                        <li><a href="https://www.facebook.com/marmiton/?ref=br_rs" class="theme-circle marR10"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://twitter.com/Marmiton_org?lang=fr" class="theme-circle marR10"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.instagram.com/marmiton_org/" class="theme-circle marR10"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                         <li>
-                                            <a href="#" class="theme-circle marL10"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                            <a href="#" class="theme-circle"><i class="fa fa-search" aria-hidden="true"></i></a>
                                             <form class="search_bar custom-dropdown">
-                                                <input type="text" name="search" placeholder="Search..">
+                                                <input type="text" name="search" placeholder=" {{  'header.chercher'|trans }} ">
                                                 <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                                             </form>
                                         </li>
@@ -72,9 +73,9 @@
                                 <div class="navbar-collapse collapse">
                                     <!-- nav -->
                                     <ul class="nav navbar-nav">
-                                        <li><a href="index.html">home</a></li>
-                                        <li><a href="menu.html">menu</a></li>
-                                        <li>
+                                        <li><a href="index.html">{{ 'header.accueil'|trans }}</a></li>
+                                        <li><a href="menu.html">{{ 'header.recettes'|trans }}</a></li>
+{#                                        <li>
                                             <a href="#">services<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                             <ul class="dropdown-menu">
                                                 <li><a href="service.html">services</a></li>
@@ -82,8 +83,8 @@
                                                 <li><a href="service-detail.html">service detail</a></li>
                                                 <li><a href="filter.html">filter</a></li>
                                             </ul>
-                                        </li>
-                                        <li>
+                                        </li>#}
+                                        {#<li>
                                             <a href="#">pages<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                             <ul class="dropdown-menu">
                                                 <li><a href="book-table.html">book table</a></li>
@@ -133,8 +134,8 @@
                                                 <li><a href="register.html">register</a></li>
                                                 <li><a href="404-error.html">404 error</a></li>
                                             </ul>
-                                        </li>
-                                        <li>
+                                        </li>#}
+                                        {#<li>
                                             <a href="#">blog<i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                             <ul class="dropdown-menu">
                                                 <li><a href="blog-style-1.html">Blogs Style 1</a></li>
@@ -160,7 +161,7 @@
                                                 <li><a href="contact-us.html">Style 1</a></li>
                                                 <li><a href="contact-us-style-2.html">Style 2</a></li>
                                             </ul>
-                                        </li>
+                                        </li>#}
                                     </ul>
                                 </div>
                                 <!-- navbar-collapse -->
