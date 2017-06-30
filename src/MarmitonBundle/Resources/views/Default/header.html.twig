@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-12">
-                    <a class="navbar-brand" href="{{ path ('marmiton_default_index')}}">
+                    <a class="navbar-brand" href="{{ path ('homepage')}}">
                         <img class="site_logo" id="logo" alt="Site Logo"  src="assets/img//header/logo.jpg" />
                     </a>
                 </div>
@@ -14,31 +14,13 @@
 
                     {% if app.user %}
                         <div class="contact-info pull-right padTB5">
-                            <a href="{{ path('fos_user_security_login') }}" class="itg-button">Déconnexion</a>
+                            <a href="{{ path('fos_user_security_logout') }}" class="">{{ app.user.username }} Déconnexion</a>
                         </div>
                         {% else %}
                         <div class="contact-info pull-right padTB5">
                             <a href="{{ path('fos_user_security_login') }}" class="itg-button">Connexion</a>
                         </div>
                     {% endif %}
-{#                    <div class="contact-info pull-right padTB5">
-                        <div class="pull-left">
-                            <a href="#" class="theme-circle marR10"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                        </div>
-                        <div class="pull-left">
-                            <h5>Email us :</h5>
-                            <p> info@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-info pull-right padTB5">
-                        <div class="pull-left">
-                            <a href="#" class="theme-circle marR10"><i class="fa fa-phone" aria-hidden="true"></i></a>
-                        </div>
-                        <div class="pull-left">
-                            <h5>Call us :</h5>
-                            <p>+5584925214</p>
-                        </div>
-                    </div>#}
                 </div>
             </div>
         </div>
@@ -80,95 +62,8 @@
                                 <div class="navbar-collapse collapse">
                                     <!-- nav -->
                                     <ul class="nav navbar-nav">
-                                        <li><a href="index.html">{{ 'header.accueil'|trans }}</a></li>
-                                        <li><a href="menu.html">{{ 'header.recettes'|trans }}</a></li>
-{#                                        <li>
-                                            <a href="#">services<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="service.html">services</a></li>
-                                                <li><a href="service-2.html">service 2</a></li>
-                                                <li><a href="service-detail.html">service detail</a></li>
-                                                <li><a href="filter.html">filter</a></li>
-                                            </ul>
-                                        </li>#}
-                                        {#<li>
-                                            <a href="#">pages<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="book-table.html">book table</a></li>
-                                                <li>
-                                                    <a href="#">about
-                                                        <i class="fa fa-angle-right hidden-xs" aria-hidden="true"></i>
-                                                        <i class="fa fa-angle-down hidden-md hidden-sm hidden-lg" aria-hidden="true"></i>
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="about-us.html">about us</a></li>
-                                                        <li><a href="our-chef.html">our chef</a></li>
-                                                        <li><a href="chef-detail.html">chef detail</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="left-side">
-                                                    <a href="#">gallery
-                                                        <i class="fa fa-angle-right hidden-xs" aria-hidden="true"></i>
-                                                        <i class="fa fa-angle-down hidden-md hidden-sm hidden-lg" aria-hidden="true"></i></a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="gallery-style-1.html">style 1</a></li>
-                                                        <li><a href="gallery-style-2.html">style 2</a></li>
-                                                        <li><a href="gallery-style-3.html">style 3</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="#">dishes
-                                                        <i class="fa fa-angle-right hidden-xs" aria-hidden="true"></i>
-                                                        <i class="fa fa-angle-down hidden-md hidden-sm hidden-lg" aria-hidden="true"></i></a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="dishes.html">our dishes</a></li>
-                                                        <li><a href="dish-detail.html">dishe detail</a></li>
-                                                        <li><a href="dish-detail-left-sidebar.html">with left sidebar</a></li>
-                                                        <li><a href="dish-detail-right-sidebar.html">with right Sidebar</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="left-side">
-                                                    <a href="#">comming soon
-                                                        <i class="fa fa-angle-right hidden-xs" aria-hidden="true"></i>
-                                                        <i class="fa fa-angle-down hidden-md hidden-sm hidden-lg" aria-hidden="true"></i></a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="comming-soon-1.html">comming soon 1</a></li>
-                                                        <li><a href="comming-soon-2.html">comming soon 2</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="faq.html">faq</a></li>
-                                                <li><a href="user-profile.html">user</a></li>
-                                                <li><a href="register.html">register</a></li>
-                                                <li><a href="404-error.html">404 error</a></li>
-                                            </ul>
-                                        </li>#}
-                                        {#<li>
-                                            <a href="#">blog<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="blog-style-1.html">Blogs Style 1</a></li>
-                                                <li><a href="blog-style-2.html">Blogs Style 2</a></li>
-                                                <li><a href="blog-style-3.html">Blogs Style 3</a></li>
-                                                <li><a href="blog-style-4.html">Blogs Style 4</a></li>
-                                                <li><a href="blog-style-5.html">Blogs Style 5</a></li>
-                                                <li>
-                                                    <a href="#">Single Blog
-                                                        <i class="fa fa-angle-right hidden-xs" aria-hidden="true"></i>
-                                                        <i class="fa fa-angle-down hidden-md hidden-sm hidden-lg" aria-hidden="true"></i></a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="blog-full-with-sidebar.html">With left Sidebar</a></li>
-                                                        <li><a href="blog-full-with-right-sidebar.html">With right Sidebar</a></li>
-                                                        <li><a href="blog-full.html">Without Sidebar</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">contact us<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="contact-us.html">Style 1</a></li>
-                                                <li><a href="contact-us-style-2.html">Style 2</a></li>
-                                            </ul>
-                                        </li>#}
+                                        <li><a href="{{ path ('homepage')}}">{{ 'header.accueil'|trans }}</a></li>
+                                        <li><a href="#">{{ 'header.recettes'|trans }}</a></li>
                                     </ul>
                                 </div>
                                 <!-- navbar-collapse -->

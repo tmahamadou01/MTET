@@ -89,6 +89,16 @@
                                 <div class="col-md-12 col-sm-12 col-xs-12 marB30 positionR">
                                     <input type="submit" class="itg-button dark" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
                                 </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 marB30 positionR">
+                                    <a href='{{ path('hwi_oauth_service_redirect', {'service': 'facebook' }) }}'
+                                       class="btn btn-default facebook"> <i
+                                                class="fa fa-facebook modal-icons"></i>
+                                        Connexion avec Facebook </a>
+                                    <a href='{{ path('hwi_oauth_service_redirect', {'service': 'google' }) }}'
+                                       class="btn btn-default google"> <i
+                                                class="fa fa-google-plus modal-icons"></i> Connexion avec Google </a>
+                                </div>
+
                             </div>
                         </div>
                     </div>

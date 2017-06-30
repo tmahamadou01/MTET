@@ -6,7 +6,8 @@ security:
 
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: ROLE_ADMIN
+        #ROLE_SUPER_ADMIN: ROLE_ADMIN
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
@@ -18,15 +19,38 @@ security:
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
-        dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
+#        dev:
+#            pattern: ^/(_(profiler|wdt)|css|images|js)/
+#            security: false
+#            oauth:
+#                resource_owners:
+#                    facebook:           "/login/check-facebook"
+#                    google:             "/login/check-google"
+#                login_path:        /login
+#                failure_path:      /login
+#
+#                oauth_user_provider:
+#                    #this is my custom user provider, created from FOSUBUserProvider - will manage the
+#                    #automatic user registration on your site, with data from the provider (facebook. google, etc.)
+#                    service: my_user_provider
 
         main:
             pattern: ^/
             form_login:
                 provider: fos_userbundle
                 csrf_token_generator: security.csrf.token_manager
+            oauth:
+                resource_owners:
+                    facebook:           "/login/check-facebook"
+                    google:             "/login/check-google"
+                login_path:        /login
+                failure_path:      /login
+
+                oauth_user_provider:
+                    #this is my custom user provider, created from FOSUBUserProvider - will manage the
+                    #automatic user registration on your site, with data from the provider (facebook. google, etc.)
+                    service: my_user_provider
+                    #service: hwi_oauth.user.provider.fosub_bridge
 
             logout:       true
             anonymous:    true
