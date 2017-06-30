@@ -1,8 +1,77 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-    {{ form_widget(form) }}
-    <div>
-        <input type="submit" value="{{ 'registration.submit'|trans }}" />
+    {#{{ form_widget(form) }}#}
+
+    <!--//================Bredcrumb starts==============//-->
+    <section>
+        <div class="bredcrumb-section padTB20 positionR">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="page-head">
+                            <div class="page-header-heading">
+                                <h3 class="theme-color">Account</h3>
+                            </div>
+                            <div class="breadcrumb-box">
+                                <ul class="breadcrumb colorW marB0">
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li class="active">Account</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//================Bredcrumb end==============//-->
+<section class="padT100 padB1000">
+    <div class="theme-heading marB50 positionR">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-8 col-xs-12  col-md-offset-3 col-sm-offset-2 col-xs-offset-0 heading-box text-center">
+                    <h1>Créer un nouveau compte</h1>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
+
+<!--//================Register start==============//-->
+<div class="padT100 padB70 register-section">
+    <div class="container">
+        {% if app.user %}
+            <div class="alert alert-danger">
+                {{ error.messageKey|trans(error.messageData, 'security') }}
+            </div>
+        {% endif %}
+
+        <div class="row">
+            <div id="login" class="tabcontent theme-form"  style="display:block;">
+                <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2 col-xs-offset-0">
+                    <div class="row">
+                        {{ form_row(form.email) }}
+                        {{ form_row(form.username) }}
+                        {{ form_row(form.plainPassword) }}
+                        <a href="{{ path('fos_user_security_login') }}" class="pull-right colorB">Déja un compte ?</a>
+                        <br>
+                        <div class="col-md-12 col-sm-12 col-xs-12 marB30 positionR">
+                            <input type="submit" class="itg-button dark" value="{{ 'registration.submit'|trans }}" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 {{ form_end(form) }}
+
+
+<div class="clear"></div>
+
+{{ include('MarmitonBundle:Default:footer.html.twig') }}

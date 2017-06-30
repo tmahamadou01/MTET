@@ -1,4 +1,7 @@
 {% extends "::base.html.twig" %}
+{% block header %}
+    {{ include('MarmitonBundle:Default:header.html.twig') }}
+{% endblock header %}
 
 {% block fos_user_content %}
 {% include "@FOSUser/Registration/register_content.html.twig" %}
