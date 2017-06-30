@@ -1,10 +1,5 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-{% if error %}
-    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-{% endif %}
-
-
     <form class="form-signin" action="{{ path("fos_user_security_check") }}" method="post">
         {% if csrf_token %}
             <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
@@ -50,38 +45,42 @@
         <!--//================Register start==============//-->
         <div class="padT100 padB70 register-section">
             <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="tab text-center marB50">
-                            <a class="tablinks active" data-id="login">Se connecter</a>
-                            <a class="tablinks " data-id="register">S'inscrire</a>
-                        </div>
-                    </div>
-                </div>
+
+                {% if error %}
+                    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+                {#<div class="row">#}
+                    {#<div class="col-xs-12">#}
+                        {#<div class="tab text-center marB50">#}
+                            {#<a class="tablinks active" data-id="login">Se connecter</a>#}
+                            {#<a class="tablinks " data-id="register">S'inscrire</a>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
                 <div class="row">
                     <div id="login" class="tabcontent theme-form"  style="display:block;">
                         <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2 col-xs-offset-0">
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12 marB30 positionR">
-                                    <input type="text" placeholder="Email">
+                                    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" placeholder="Entrez votre username">
                                     <i class="fa fa-envelope input" aria-hidden="true"></i>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 marB10 positionR">
-                                    <input type="text" placeholder="Mot de passe">
+                                    <input type="password" id="password" name="_password" required="required" placeholder="Mot de passe">
                                     <i class="fa fa-lock input" aria-hidden="true"></i>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 marB30 positionR">
-                                    <input id="checkbox1" type="checkbox" name="$0-$2000" value="$0-$2000">
-                                    <label class="radio-label" for="checkbox1">Se souvenir de moi</label>
+                                    <input type="checkbox" id="remember_me" name="_remember_me $0-$2000" value="on" />
+                                    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
                                     <a href="#" class="pull-right colorB">Mot de passe oublié ?</a>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 marB30 positionR">
-                                    <a href="#" class="itg-button dark">Connection</a>
+                                    <input type="submit" class="itg-button dark" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="register" class="tabcontent theme-form">
+                    {#<div id="register" class="tabcontent theme-form">
                         <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
                             <div class="row">
                                 <div class="col-md-6 col-sm-6 col-xs-12 marB30 positionR">
@@ -113,7 +112,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>#}
                 </div>
             </div>
         </div>
