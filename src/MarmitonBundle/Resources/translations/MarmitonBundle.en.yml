@@ -96,6 +96,21 @@ header:
     accueil: Home
     recettes: Recipes
 
+carousel:
+  nom_de_la_recette: Name of recipe
+  les: The
+  recettes_qui_ont_le_plus: " most succesfull "
+  succes: recipes
+  voir_la_recette: See the recipe
+
+vos_recettes: Your recipes
+
+communaute:
+  titre: Our community is growing
+  nombre_de_recettes: Number of recipes
+  utilisateurs_satisfaits: Satisfied users
+  nombre_d_utilisateurs: Number of users
+
 footer:
     description: 'One fine day in June 2017, we launched the first version of Marmiton,
             a recipe-sharing site, with no intention other than to provide a useful and friendly service.'
@@ -107,4 +122,17 @@ footer:
     galerie: Gallery
     reseaux_sociaux: Social media
     newsletter:
-        chercher: Chercher
+        chercher: Search...
+
+login:
+  votre_compte: Votre compte
+  accueil: Accueil
+  compte: Compte
+  connectez_vous: Connectez vous
+  login: Login
+  mdp: Mot de passe
+  se_souvenir_de_moi: Se souvenir de moi
+  pas_de_compte: Pas de compte ?
+  connexion: Connexion
+  connexion_fb: Se connecter avec Facebook
+  connexion_google: Se connecter avec Google
