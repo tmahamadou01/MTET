@@ -9,6 +9,7 @@ group:
         updated: 'Le groupe a été mis à jour.'
         created: 'Le groupe a été créé.'
         deleted: 'Le groupe a été supprimé.'
+
 security:
     login:
         username: 'Nom d''utilisateur'
@@ -125,11 +126,5 @@ footer:
     newsletter:
         chercher: Chercher...
 
-login:
 
-    login: Login
-    mdp: Mot de passe
-    se_souvenir_de_moi: Se souvenir de moi
-    pas_de_compte: Pas de compte ?
-    connexion: Connexion
 

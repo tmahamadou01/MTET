@@ -12,10 +12,16 @@ group:
 
 security:
     login:
-        username: Username
-        password: Password
-        remember_me: 'Remember me'
-        submit: 'Log in'
+        username: 'Nom d''utilisateur'
+        password: 'Mot de passe'
+        remember_me: 'Se souvenir de moi'
+        submit: Connexion
+        connexion_fb: Se connecter avec Facebook
+        connexion_google: Se connecter avec Google
+        votre_compte: Votre compte
+        accueil: Accueil
+        compte: Compte
+        connectez_vous: Connectez vous
 
 profile:
     show:
@@ -99,7 +105,7 @@ header:
 carousel:
   nom_de_la_recette: Name of recipe
   les: The
-  recettes_qui_ont_le_plus: " most succesfull "
+  recettes_qui_ont_le_plus: " most successfull "
   succes: recipes
   voir_la_recette: See the recipe
 
@@ -124,15 +130,3 @@ footer:
     newsletter:
         chercher: Search...
 
-login:
-  votre_compte: Votre compte
-  accueil: Accueil
-  compte: Compte
-  connectez_vous: Connectez vous
-  login: Login
-  mdp: Mot de passe
-  se_souvenir_de_moi: Se souvenir de moi
-  pas_de_compte: Pas de compte ?
-  connexion: Connexion
-  connexion_fb: Se connecter avec Facebook
-  connexion_google: Se connecter avec Google
