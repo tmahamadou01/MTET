@@ -14,4 +14,12 @@ class DefaultController extends Controller
     {
         return $this->render('MarmitonBundle:Default:index.html.twig');
     }
+
+    /**
+     * @Route("/receipes")
+     */
+    public function receipesAction()
+    {
+        return $this->render('MarmitonBundle:Default:receipes.html.twig');
+    }
 }
