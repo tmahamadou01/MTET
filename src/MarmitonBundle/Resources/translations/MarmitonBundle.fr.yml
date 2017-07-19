@@ -9,12 +9,20 @@ group:
         updated: 'Le groupe a été mis à jour.'
         created: 'Le groupe a été créé.'
         deleted: 'Le groupe a été supprimé.'
+
 security:
     login:
         username: 'Nom d''utilisateur'
         password: 'Mot de passe'
         remember_me: 'Se souvenir de moi'
         submit: Connexion
+        connexion_fb: Se connecter avec Facebook
+        connexion_google: Se connecter avec Google
+        votre_compte: Votre compte
+        accueil: Accueil
+        compte: Compte
+        connectez_vous: Connectez vous
+
 profile:
     show:
         username: 'Nom d''utilisateur'
@@ -90,6 +98,21 @@ header:
     accueil: Accueil
     recettes: Recettes
 
+carousel:
+  nom_de_la_recette: Nom de la recette
+  les: Les
+  recettes_qui_ont_le_plus: " recettes qui ont le plus de "
+  succes: succès
+  voir_la_recette: Voir la recette
+
+vos_recettes: Vos recettes
+
+communaute:
+  titre: Notre communauté s'agrandit
+  nombre_de_recettes: Nombre de recettes
+  utilisateurs_satisfaits: Utilisateurs satisfaits
+  nombre_d_utilisateurs: Nombre d'utilisateurs
+
 footer:
     description: 'Un beau jour de juin 2017, nous avons lancé la première version de Marmiton, site de partage de recettes,
                   sans volonté autre que celle de fournir un service utile et sympa.'
@@ -102,3 +125,6 @@ footer:
     reseaux_sociaux: Réseaux sociaux
     newsletter:
         chercher: Chercher...
+
+
+

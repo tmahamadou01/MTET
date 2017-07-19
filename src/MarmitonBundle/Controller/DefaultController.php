@@ -22,4 +22,5 @@ class DefaultController extends Controller
     {
         return $this->render('MarmitonBundle:Default:receipes.html.twig');
     }
+
 }
