@@ -2670,3 +2670,14 @@ i.input {
     bottom: 105px;
     right: 0;
 }
+
+#elements {
+    background: rgba(0,0,0, 0.04);
+    border-width:0.1px;
+    border-style:solid;
+    border-color:black;
+}
+
+#button {
+    margin-bottom: 10px;
+}
