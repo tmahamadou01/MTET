@@ -1,4 +1,5 @@
-{% trans_default_domain 'FOSUserBundle' %}
+
+{% trans_default_domain 'MarmitonBundle' %}
 
     <form class="form-signin" action="{{ path("fos_user_security_check") }}" method="post">
         {% if csrf_token %}
@@ -24,14 +25,14 @@
                         <div class="col-md-12">
                             <div class="page-head">
                                 <div class="page-header-heading">
-                                    <h3 class="theme-color">Account</h3>
+                                    <h3 class="theme-color"> {{ 'security.login.votre_compte'|trans }} </h3>
                                 </div>
                                 <div class="breadcrumb-box">
                                     <ul class="breadcrumb colorW marB0">
                                         <li>
-                                            <a href="index.html">Home</a>
+                                            <a href="index.html">{{ 'security.login.accueil'|trans }}</a>
                                         </li>
-                                        <li class="active">Account</li>
+                                        <li class="active">{{ 'security.login.compte'|trans }}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -46,7 +47,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 col-sm-8 col-xs-12  col-md-offset-3 col-sm-offset-2 col-xs-offset-0 heading-box text-center">
-                            <h1>Connectez vous</h1>
+                            <h1>{{ 'security.login.connectez_vous'|trans }}</h1>
                         </div>
                     </div>
                 </div>
@@ -74,11 +75,11 @@
                         <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2 col-xs-offset-0">
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12 marB30 positionR">
-                                    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" placeholder="Entrez votre username">
+                                    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" placeholder= "{{ 'security.login.username'|trans }}" >
                                     <i class="fa fa-envelope input" aria-hidden="true"></i>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 marB10 positionR">
-                                    <input type="password" id="password" name="_password" required="required" placeholder="Mot de passe">
+                                    <input type="password" id="password" name="_password" required="required" placeholder= "{{ 'security.login.password'|trans }}" >
                                     <i class="fa fa-lock input" aria-hidden="true"></i>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 marB30 positionR">
@@ -102,39 +103,6 @@
                             </div>
                         </div>
                     </div>
-                    {#<div id="register" class="tabcontent theme-form">
-                        <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6 col-xs-12 marB30 positionR">
-                                    <input type="text" placeholder="First name">
-                                    <i class="fa fa-user input" aria-hidden="true"></i>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12 marB30 positionR">
-                                    <input type="text" placeholder="Last name">
-                                    <i class="fa fa-user input" aria-hidden="true"></i>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12 marB30 positionR">
-                                    <input type="text" placeholder="Email">
-                                    <i class="fa fa-envelope input" aria-hidden="true"></i>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12 marB30 positionR">
-                                    <input type="text" placeholder="Contact no.">
-                                    <i class="fa fa-phone input" aria-hidden="true"></i>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12 marB30 positionR">
-                                    <input type="text" placeholder="Password">
-                                    <i class="fa fa-lock input" aria-hidden="true"></i>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12 marB30 positionR">
-                                    <input type="text" placeholder="Confirm password">
-                                    <i class="fa fa-lock input" aria-hidden="true"></i>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12 marB30 positionR">
-                                    <a href="#" class="itg-button dark">Enregistrer</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>#}
                 </div>
             </div>
         </div>

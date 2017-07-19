@@ -94,14 +94,14 @@ $(window).on("load", function() {
         rangeSliderOne.slider({
             range: true,
             min: 0,
-            max: 500,
+            max: 240,
             values: [ 75, 300 ],
             slide: function( event, ui ) {
-                $( "#amount1" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                $( "#amount1" ).val( "De " + ui.values[ 0 ] + " à " + ui.values[ 1 ] + " minutes");
             }
         });
-        $( "#amount1" ).val( "$" + rangeSliderOne.slider( "values", 0 ) +
-            " - $" + rangeSliderOne.slider( "values", 1 ) );
+        $( "#amount1" ).val( "De " + rangeSliderOne.slider( "values", 0 ) +
+            " à " + rangeSliderOne.slider( "values", 1 ) + " minutes" );
 
     }
 
@@ -109,14 +109,14 @@ $(window).on("load", function() {
         $( "#slider-range-two" ).slider({
             range: true,
             min: 0,
-            max: 500,
+            max: 240,
             values: [ 75, 300 ],
             slide: function( event, ui ) {
-                $( "#amount2" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                $( "#amount2" ).val( "De " + ui.values[ 0 ] + " à " + ui.values[ 1 ] + " minutes");
             }
         });
-        $( "#amount2" ).val( "$" + rangeSliderTwo.slider( "values", 0 ) +
-            " - $" + rangeSliderTwo.slider( "values", 1 ) );
+        $( "#amount2" ).val( "De " + rangeSliderTwo.slider( "values", 0 ) +
+            " à " + rangeSliderTwo.slider( "values", 1 ) + " minutes" );
 
     }
 
