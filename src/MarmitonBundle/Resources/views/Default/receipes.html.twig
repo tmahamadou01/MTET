@@ -45,44 +45,36 @@
 <!--//================Bredcrumb end==============//-->
 <div class="clear"></div>
 <!--//================Filter start==============//-->
-<section class="padT100 padB20">
+<section class="padT60 padB10">
+    <div class="theme-heading marB50 positionR">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-8 col-xs-12  col-md-offset-3 col-sm-offset-2 col-xs-offset-0 heading-box text-center">
+                    <h1>Chercher une recette</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="padT10 padB20">
 <div class="filter-section marB70">
     <div class="container">
         <div class="row ">
             <form class="marB20">
-                <div class="col-md-3 col-sm-3 col-xs-12 filter-box marB30">
-                    <label>Select categorie</label>
+                <div class="col-md-6 col-sm-6 filter-box marB30">
+                    <label>Type de plat</label>
                     <select>
-                        <option value="lunch">Lunch</option>
-                        <option value="breakfast">Breakfast</option>
-                        <option value="desert">Desert</option>
-                        <option value="pizza">Fresh pizza</option>
-                        <option value="dinner">Dinner</option>
+                        <option value="entree">Entrée</option>
+                        <option value="plat_principal">Plat principal</option>
+                        <option value="dessert">Dessert</option>
                     </select>
                 </div>
-                <div class="col-md-3 col-sm-3 col-xs-12 filter-box marB30">
-                    <label>Select type</label>
+                <div class="col-md-6 col-sm-6 filter-box marB30">
+                    <label>Niveau de difficulté</label>
                     <select>
-                        <option value="veg">Veg</option>
-                        <option value="non-veg">Non veg</option>
-                    </select>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-12 filter-box marB30">
-                    <label>Select drink</label>
-                    <select>
-                        <option value="All">Cold drink</option>
-                        <option value="Men">Juice</option>
-                        <option value="Women">Bear</option>
-                        <option value="Kids">Soda</option>
-                    </select>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-12 filter-box marB30">
-                    <label>Select menu</label>
-                    <select>
-                        <option value="All">Muffins</option>
-                        <option value="Men">BBQ chicken</option>
-                        <option value="Women">Salade</option>
-                        <option value="Kids">Chinese food</option>
+                        <option value="facile">Facile</option>
+                        <option value="moyenne">Moyenne</option>
+                        <option value="difficile">Difficile</option>
                     </select>
                 </div>
             </form>
@@ -90,68 +82,33 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-12 marB30">
-                <h4 class="marB20">Filter dishe by price</h4>
+            <div class="col-md-6 col-sm-6 marB30">
+                <h4 class="marB20">Filtrer par temps de préparation</h4>
                 <div id="slider-range-one" class="filter-slider"></div>
-                <p><input type="text" id="amount1" readonly>
-                </p>
-                <p>Filter by : <span>min price</span> to <span>max price</span></p>
+                <p><input type="text" id="amount1" readonly></p>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12 marB30">
-                <h4 class="marB20">Filter dishe by weight</h4>
+            <div class="col-md-6 col-sm-6 marB30">
+                <h4 class="marB20">Filtrer par temps de cuisson</h4>
                 <div id="slider-range-two" class="filter-slider"></div>
-                <p><input type="text" id="amount2" readonly>
-                </p>
-                <p>Filter by : <span>min price</span> to <span>max price</span></p>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-12 marB30">
-                <h4 class="marB20">Popular dish since</h4>
-                <div id="slider-range-three" class="filter-slider"></div>
-                <p><input type="text" id="amount3" readonly>
-                </p>
-                <p>Filter by : <span>min price</span> to <span>max price</span></p>
+                <p><input type="text" id="amount2" readonly></p>
             </div>
         </div>
     </div>
+
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h4 class="marB20">Related product by :</h4>
-                <div class="filter-check-box marB20">
-                    <ul>
-                        <li>
-                            <input type="checkbox" id="c1" name="cb">
-                            <label for="c1">Price</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="c2" name="cb">
-                            <label for="c2">Dish</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="c3" name="cb">
-                            <label for="c3">Weight</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="c4" name="cb">
-                            <label for="c4">Veg</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="c5" name="cb">
-                            <label for="c5">Non-veg</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="c6" name="cb">
-                            <label for="c6">All</label>
-                        </li>
-                    </ul>
+        <div class="col-md-12 col-sm-12">
+            <div class="col-md-6 col-sm-6">
+                <div class="col-xs-11">
+                    <div class="search_bar">
+                        <input type="text" name="search" placeholder="Chercher...">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 text-center">
-                <a href="#" class="itg-button">Search</a>
+            <div class="col-md-6 col-sm-6">
+                <div class="col-xs-12 text-center">
+                    <a href="#" class="itg-button">Rechercher</a>
+                </div>
             </div>
         </div>
     </div>

@@ -2538,7 +2538,7 @@ i.input {
     outline: none;
 }
 .filter-section input {
-    background-color: transparent;
+    /*background-color: transparent;*/
     border: 0;
 }
 .filter-section form {
