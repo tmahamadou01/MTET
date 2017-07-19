@@ -2,6 +2,7 @@
 
 namespace MarmitonBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -61,6 +62,17 @@ class TypePlat
     public function getName()
     {
         return $this->name;
+    }
+
+
+    /**
+     * @ORM\OneToMany(targetEntity="Receipts", mappedBy="idTypePlat")
+     */
+    private $receipts;
+
+    public function __construct()
+    {
+        $this->receipts = new ArrayCollection();
     }
 }
 
