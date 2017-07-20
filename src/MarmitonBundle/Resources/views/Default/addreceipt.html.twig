@@ -3,9 +3,34 @@
     {{ include('MarmitonBundle:Default:header.html.twig') }}
     <div class="clear"></div>
 
+    {% if app.session.started %}
+        {% for flashMessage in app.session.flashbag.get('notice') %}
+            <div class="container" style="padding-top: 50px">
+                <div class="alert alert-{{ flashMessage.alert }} alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <strong>{{ flashMessage.title }}</strong> {{ flashMessage.message }}
+                </div>
+        </div>
+        {% endfor %}
+    {% endif %}
+
     {% trans_default_domain 'FOSUserBundle' %}
 
-    {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+    <section class="padT60 padB10">
+        <div class="theme-heading marB50 positionR">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-8 col-xs-12  col-md-offset-3 col-sm-offset-2 col-xs-offset-0 heading-box text-center">
+                        <h1>Ajouter une Recette</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<form role="form" action="{{ path('add_receipes') }}" method="post" enctype="multipart/form-data">
     <!--//================Register start==============//-->
     <div class="padT100 padB70 register-section">
         <div class="container">
@@ -19,21 +44,63 @@
                 <div id="login" class="tabcontent theme-form"  style="display:block;">
                     <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2 col-xs-offset-0">
                         <div class="row">
-
-                            <a href="{{ path('fos_user_security_login') }}" class="pull-right colorB">Déja un compte ?</a>
-                            <br>
                             <div class="col-md-12 col-sm-12 col-xs-12 marB30 positionR">
-                                <input type="submit" class="itg-button dark" value="{{ 'registration.submit'|trans }}" />
+                                {{ form_label(form.name) }}
+                                {{ form_errors(form.name) }}
+                                {{ form_widget(form.name, { attr: { class: 'form-control' }}) }}
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 marB30 positionR">
+                                {{ form_label(form.TypePlat) }}
+                                {{ form_errors(form.TypePlat) }}
+                                {{ form_widget(form.TypePlat, { attr: { class: 'form-control' }}) }}
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 marB30 positionR">
+                                {{ form_label(form.niveau) }}
+                                {{ form_errors(form.niveau) }}
+                                {{ form_widget(form.niveau, { attr: { class: 'form-control' }}) }}
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 marB30 positionR">
+                                {{ form_label(form.ingredients) }}
+                                {{ form_errors(form.ingredients) }}
+                                {{ form_widget(form.ingredients, { attr: { class: 'form-control' }}) }}
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 marB30 positionR">
+                                {{ form_label(form.description) }}
+                                {{ form_errors(form.description) }}
+                                {{ form_widget(form.description, { attr: { class: 'form-control' }}) }}
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 marB30 positionR">
+                                {{ form_label(form.file) }}
+                                {{ form_errors(form.file) }}
+                                {{ form_widget(form.file, { attr: { class: 'form-control' }}) }}
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 marB30 positionR">
+                                <input type="submit" class="itg-button dark" id="_submit" name="_submit" value="Envoyer" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            {#<div class="row">#}
+                {#<div id="login" class="tabcontent theme-form"  style="display:block;">#}
+                    {#<div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2 col-xs-offset-0">#}
+                        {#<div class="row">#}
+
+                            {#<a href="{{ path('fos_user_security_login') }}" class="pull-right colorB">Déja un compte ?</a>#}
+                            {#<br>#}
+                            {#<div class="col-md-12 col-sm-12 col-xs-12 marB30 positionR">#}
+                                {#<input type="submit" class="itg-button dark" value="{{ 'registration.submit'|trans }}" />#}
+                            {#</div>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+
         </div>
     </div>
 
-    {{ form_end(form) }}
+</form>
 
     <div class="clear"></div>
     {{ include('MarmitonBundle:Default:footer.html.twig') }}

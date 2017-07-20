@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style_header.css') }}">
 </head>
 <body>
-{% for type, messages in app.session.flashBag.all %}
-    {% for message in messages %}
-        <div class="{{ type }}">
-            {{ message|trans({}, 'FOSUserBundle') }}
-        </div>
-    {% endfor %}
-{% endfor %}
+{#{% for type, messages in app.session.flashBag.all %}#}
+    {#{% for message in messages %}#}
+        {#<div class="{{ type }}">#}
+            {#{{ message|trans({}, 'FOSUserBundle') }}#}
+        {#</div>#}
+    {#{% endfor %}#}
+{#{% endfor %}#}
 {% block body %}
     {% block header %}{% endblock header %}
     {% block fos_user_content %}{% endblock %}

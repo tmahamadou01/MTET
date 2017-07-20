@@ -64,6 +64,11 @@ class TypePlat
         return $this->name;
     }
 
+    public function getTypePlat()
+    {
+        return $this->name;
+    }
+
 
     /**
      * @ORM\OneToMany(targetEntity="Receipts", mappedBy="idTypePlat")

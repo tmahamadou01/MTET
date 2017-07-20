@@ -123,160 +123,31 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="row marB20">
+                    {% for receipt in pagination %}
                     <div class="col-md-3 col-sm-3 col-xs-12">
                         <div class="blog text-center theme-hover sticker marB30" id="elements">
+                        {% if receipt.pictureName %}
+                            <figure class="marB20">
+                                <img src="{{ asset(receipt.getWebPath()) }}" alt="">
+                            </figure>
+                        {% else %}
                             <figure class="marB20">
                                 <img src="assets/img/footer/brasserie.jpg" alt="">
                             </figure>
-                            <h3 class="marB10"><a href="#">Mauris lacinia lactus</a></h3>
-                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing
-                                adipisicing sed do eiusmod tempor sed do eius.
+                        {% endif %}
+                            <h3 class="marB10"><a href="#">{{ receipt.name }}</a></h3>
+                            <p>
+                                {{ receipt.description }}
                             </p>
                             <a href="#" class="itg-button" id="button">Read More</a>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="blog text-center theme-hover sticker marB30" id="elements">
-                            <figure class="marB20">
-                                <img src="assets/img/footer/brasserie.jpg" alt="">
-                            </figure>
-                            <h3 class="marB10"><a href="#">Mauris lacinia lactus</a></h3>
-                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing
-                                adipisicing sed do eiusmod tempor sed do eius.
-                            </p>
-                            <a href="#" class="itg-button" id="button">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="blog text-center theme-hover sticker marB30" id="elements">
-                            <figure class="marB20">
-                                <img src="assets/img/footer/brasserie.jpg" alt="">
-                            </figure>
-                            <h3 class="marB10"><a href="#">Mauris lacinia lactus</a></h3>
-                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing
-                                adipisicing sed do eiusmod tempor sed do eius.
-                            </p>
-                            <a href="#" class="itg-button" id="button">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="blog text-center theme-hover sticker marB30" id="elements">
-                            <figure class="marB20">
-                                <img src="assets/img/footer/brasserie.jpg" alt="">
-                            </figure>
-                            <h3 class="marB10"><a href="#">Mauris lacinia lactus</a></h3>
-                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing
-                                adipisicing sed do eiusmod tempor sed do eius.
-                            </p>
-                            <a href="#" class="itg-button" id="button">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="blog text-center theme-hover sticker marB30" id="elements">
-                            <figure class="marB20">
-                                <img src="assets/img/footer/brasserie.jpg" alt="">
-                            </figure>
-                            <h3 class="marB10"><a href="#">Mauris lacinia lactus</a></h3>
-                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing
-                                adipisicing sed do eiusmod tempor sed do eius.
-                            </p>
-                            <a href="#" class="itg-button" id="button">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="blog text-center theme-hover sticker marB30" id="elements">
-                            <figure class="marB20">
-                                <img src="assets/img/footer/brasserie.jpg" alt="">
-                            </figure>
-                            <h3 class="marB10"><a href="#">Mauris lacinia lactus</a></h3>
-                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing
-                                adipisicing sed do eiusmod tempor sed do eius.
-                            </p>
-                            <a href="#" class="itg-button" id="button">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="blog text-center theme-hover sticker marB30" id="elements">
-                            <figure class="marB20">
-                                <img src="assets/img/footer/brasserie.jpg" alt="">
-                            </figure>
-                            <h3 class="marB10"><a href="#">Mauris lacinia lactus</a></h3>
-                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing
-                                adipisicing sed do eiusmod tempor sed do eius.
-                            </p>
-                            <a href="#" class="itg-button" id="button">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="blog text-center theme-hover sticker marB30" id="elements">
-                            <figure class="marB20">
-                                <img src="assets/img/footer/brasserie.jpg" alt="">
-                            </figure>
-                            <h3 class="marB10"><a href="#">Mauris lacinia lactus</a></h3>
-                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing
-                                adipisicing sed do eiusmod tempor sed do eius.
-                            </p>
-                            <a href="#" class="itg-button" id="button">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="blog text-center theme-hover sticker marB30" id="elements">
-                            <figure class="marB20">
-                                <img src="assets/img/footer/brasserie.jpg" alt="">
-                            </figure>
-                            <h3 class="marB10"><a href="#">Mauris lacinia lactus</a></h3>
-                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing
-                                adipisicing sed do eiusmod tempor sed do eius.
-                            </p>
-                            <a href="#" class="itg-button" id="button">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="blog text-center theme-hover sticker marB30" id="elements">
-                            <figure class="marB20">
-                                <img src="assets/img/footer/brasserie.jpg" alt="">
-                            </figure>
-                            <h3 class="marB10"><a href="#">Mauris lacinia lactus</a></h3>
-                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing
-                                adipisicing sed do eiusmod tempor sed do eius.
-                            </p>
-                            <a href="#" class="itg-button" id="button">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="blog text-center theme-hover sticker marB30" id="elements">
-                            <figure class="marB20">
-                                <img src="assets/img/footer/brasserie.jpg" alt="">
-                            </figure>
-                            <h3 class="marB10"><a href="#">Mauris lacinia lactus</a></h3>
-                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing
-                                adipisicing sed do eiusmod tempor sed do eius.
-                            </p>
-                            <a href="#" class="itg-button" id="button">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="blog text-center theme-hover sticker marB30" id="elements">
-                            <figure class="marB20">
-                                <img src="assets/img/footer/brasserie.jpg" alt="">
-                            </figure>
-                            <h3 class="marB10"><a href="#">Mauris lacinia lactus</a></h3>
-                            <p>Lorem ipsum dolor sit amet conse ctetur adipisicing
-                                adipisicing sed do eiusmod tempor sed do eius.
-                            </p>
-                            <a href="#" class="itg-button" id="button">Read More</a>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="pagination-box text-right marB30">
-                            <a href="#"><span><i class="fa fa-angle-left" aria-hidden="true"></i></span></a>
-                            <a href="#"><span>1</span></a>
-                            <a href="#"><span>2</span></a>
-                            <a href="#"><span>3</span></a>
-                            <a href="#"><span>4</span></a>
-                            <a href="#"><span><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                            {{ knp_pagination_render(pagination) }}
                         </div>
                     </div>
                 </div>
