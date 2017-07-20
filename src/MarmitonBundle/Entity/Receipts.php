@@ -27,7 +27,7 @@ class Receipts
      *
      * @ORM\Column(name="name", type="string", length=255)
      */
-    private $name;
+    public $name;
 
     /**
      * @var string
@@ -48,7 +48,7 @@ class Receipts
      *
      * @ORM\Column(name="ingredients", type="string", length=255)
      */
-    private $ingredients;
+    public $ingredients;
 
     /**
      * @return string

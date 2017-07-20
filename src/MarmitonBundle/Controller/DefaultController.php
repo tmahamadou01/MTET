@@ -38,7 +38,7 @@ class DefaultController extends Controller
     public function receipesAction(Request $request)
     {
         $em    = $this->get('doctrine.orm.entity_manager');
-        $dql   = "SELECT r FROM MarmitonBundle:Receipts r";
+        $dql   = "SELECT r FROM MarmitonBundle:Receipts r ORDER BY r.id DESC ";
         $query = $em->createQuery($dql);
 
         $paginator  = $this->get('knp_paginator');
@@ -86,6 +86,24 @@ class DefaultController extends Controller
         return $this->render('MarmitonBundle:Default:addreceipt.html.twig',[
             'form' => $form->createView(),
             'receiptes' => $receipts
+        ]);
+    }
+
+    /**
+     * @Route("/receipes/id/{id}", name="detail_receipes")
+     * @param $id
+     */
+    public function detailReceipesAction(Request $request, $id)
+    {
+        $em = $this->get('doctrine.orm.entity_manager');
+        $receipes = $em->getRepository('MarmitonBundle:Receipts')->findOneBy(['id' => $id]);
+
+        $list_ingredient_array = explode(',', $receipes->ingredients);
+        //var_dump($list_ingredient_array);die();
+
+        return $this->render('MarmitonBundle:Default:detail.html.twig',[
+            'receipes' => $receipes,
+            'ingredients' => $list_ingredient_array
         ]);
     }
 }

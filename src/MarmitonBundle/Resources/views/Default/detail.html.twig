@@ -1,0 +1,101 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+    {{ include('MarmitonBundle:Default:header.html.twig') }}
+    <section class="padT60 padB10">
+        <div class="theme-heading marB50 positionR">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-8 col-xs-12  col-md-offset-3 col-sm-offset-2 col-xs-offset-0 heading-box text-center">
+                        <h1>Detail de la recette</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--//================Dish start==============//-->
+    <section class="padB70 dishes">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 pull-right">
+                    <div class="row">
+                        <div class="col-xs-12 ">
+                            <div class="dish full border-bottom padB20 marB50 sticker">
+                                <div class="sticker">
+                                    <figure class="marB20">
+                                        <img src="/assets/img/footer/brasserie.jpg" alt="">
+                                    </figure>
+                                    <div class="sticker-box simple">
+                                        <span class="sticker-tag">{{ receipes.name }}</span>
+                                    </div>
+                                </div>
+                                <div class="theme-box marB30">
+                                    <span>Nombre personne : <strong>2 People</strong> </span>
+                                    <span>Heure de préparation : <strong>1 hr </strong> </span>
+                                    <span>Calories : <strong>150 kcal</strong> </span>
+                                    <span>Prep-time : <strong>30 minutes</strong> </span>
+                                    <span>Customer review :
+                                        <strong>
+                                        <i class="fa fa-star red" aria-hidden="true"></i>
+                                        <i class="fa fa-star red" aria-hidden="true"></i>
+                                        <i class="fa fa-star red" aria-hidden="true"></i>
+                                        <i class="fa fa-star red" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        </strong>
+                                        </span>
+                                </div>
+                                <div class="clear"></div>
+                                <h3 class="marB20">Description</h3>
+                                <p>
+                                    {{ receipes.description }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row marB50">
+                        <div class="col-md-7 col-sm-6 pull-left marB30">
+                            <h3 class="marB20">Liste des ingredients</h3>
+                            <ul>
+                                {% for ingredient in ingredients %}
+                                    <li> - {{ ingredient }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="theme-form marB30">
+                                <h3 class="marB30">Leave reply</h3>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-xs-12 marB30 positionR">
+                                        <input type="text" placeholder="Name">
+                                        <i class="fa fa-user input" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-12 marB30 positionR">
+                                        <input type="text" placeholder="Email">
+                                        <i class="fa fa-envelope input" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-12 marB30 positionR">
+                                        <input type="text" placeholder="Contact" >
+                                        <i class="fa fa-phone input" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 marB20 positionR">
+                                        <textarea placeholder="Type here" rows="6"></textarea>
+                                        <i class="fa fa-comment input" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <button type="submit" class="itg-button">Post comment</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//================Dish end==============//-->
+
+    <div class="clear"></div>
+    {{ include('MarmitonBundle:Default:footer.html.twig') }}
+{% endblock %}
