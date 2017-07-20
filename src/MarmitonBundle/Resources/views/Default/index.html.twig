@@ -40,106 +40,28 @@
     <div class="container">
         <div class="row">
             <div id="collection-slider" class="owl-carousel owl-theme">
+                {% for receipt in receipts %}
                 <div class="item">
                     <div class="col-md-12">
                         <div class="collection-box theme-hover sticker">
-                            <figure class="marB20">
-                                <img src="assets/img/dishes/1.jpg" alt=""/>
-                            </figure>
-                            <h3 class="marB10"><a href="#">Muffins</a></h3>
-                            <p>Integr lorem quam adipiscing the
-                                tristique , eleifend turpis Pelle
-                                tesque cursus arcu
+                            {% if receipt.pictureName %}
+                                <figure class="marB20">
+                                    <img src="{{ asset(receipt.getWebPath()) }}" alt="">
+                                </figure>
+                            {% else %}
+                                <figure class="marB20">
+                                    <img src="assets/img/footer/brasserie.jpg" alt="">
+                                </figure>
+                            {% endif %}
+                            <h3 class="marB10"><a href="#">{{ receipt.name }}</a></h3>
+                            <p>
+                                {{ receipt.description }}
                             </p>
                             <a href="#" class="colorB">Order Now</a>
-                            <div class="sticker-box">
-                                <span class="sticker-tag">Only 12.99 $</span>
-                                <br>
-                                <span class="sticker-tag">10% OFF</span>
-                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="col-md-12">
-                        <div class="collection-box theme-hover sticker">
-                            <figure class="marB20">
-                                <img src="assets/img/dishes/2.jpg" alt=""/>
-                            </figure>
-                            <h3 class="marB10"><a href="#">Juice</a></h3>
-                            <p>Integr lorem quam adipiscing the
-                                tristique , eleifend turpis Pelle
-                                tesque cursus arcu
-                            </p>
-                            <a href="#" class="colorB">Order Now</a>
-                            <div class="sticker-box">
-                                <span class="sticker-tag">Only 12.99 $</span>
-                                <br>
-                                <span class="sticker-tag">10% OFF</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="col-md-12">
-                        <div class="collection-box theme-hover sticker">
-                            <figure class="marB20">
-                                <img src="assets/img/dishes/3.jpg" alt=""/>
-                            </figure>
-                            <h3 class="marB10"><a href="#">BBQ chicken</a></h3>
-                            <p>Integr lorem quam adipiscing the
-                                tristique , eleifend turpis Pelle
-                                tesque cursus arcu
-                            </p>
-                            <a href="#" class="colorB">Order Now</a>
-                            <div class="sticker-box">
-                                <span class="sticker-tag">Only 12.99 $</span>
-                                <br>
-                                <span class="sticker-tag">10% OFF</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="col-md-12">
-                        <div class="collection-box theme-hover sticker">
-                            <figure class="marB20">
-                                <img src="assets/img/dishes/4.jpg" alt=""/>
-                            </figure>
-                            <h3 class="marB10"><a href="#">Salade</a></h3>
-                            <p>Integr lorem quam adipiscing the
-                                tristique , eleifend turpis Pelle
-                                tesque cursus arcu
-                            </p>
-                            <a href="#" class="colorB">Order Now</a>
-                            <div class="sticker-box">
-                                <span class="sticker-tag">Only 12.99 $</span>
-                                <br>
-                                <span class="sticker-tag">10% OFF</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="col-md-12">
-                        <div class="collection-box theme-hover sticker">
-                            <figure class="marB20">
-                                <img src="assets/img/dishes/5.jpg" alt=""/>
-                            </figure>
-                            <h3 class="marB10"><a href="#">BBQ chicken</a></h3>
-                            <p>Integr lorem quam adipiscing the
-                                tristique , eleifend turpis Pelle
-                                tesque cursus arcu
-                            </p>
-                            <a href="#" class="colorB">Order Now</a>
-                            <div class="sticker-box">
-                                <span class="sticker-tag">Only 12.99 $</span>
-                                <br>
-                                <span class="sticker-tag">10% OFF</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

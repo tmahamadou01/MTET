@@ -78,7 +78,7 @@ fos_user:
     user_class: MarmitonBundle\Entity\User
 
     from_email:
-        address: "%mailer_user%"
+        address: mail@mail.Fr
         sender_name: "%mailer_user%"
 
 

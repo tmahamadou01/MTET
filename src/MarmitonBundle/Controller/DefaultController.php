@@ -15,7 +15,14 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('MarmitonBundle:Default:index.html.twig');
+        $em = $this->get('doctrine.orm.entity_manager');
+        $receipes = $em->getRepository('MarmitonBundle:Receipts')->findAll();
+
+        //var_dump($receipes);die();
+        return $this->render('MarmitonBundle:Default:index.html.twig', array(
+            'receipts' => $receipes
+        ));
+        //return $this->render('MarmitonBundle:Default:index.html.twig');
     }
 
     /**
@@ -33,7 +40,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/receipes")
+     * @Route("/receipes", name="index_receipes")
      */
     public function receipesAction(Request $request)
     {
@@ -50,6 +57,29 @@ class DefaultController extends Controller
 
         // parameters to template
         return $this->render('MarmitonBundle:Default:receipes.html.twig', array('pagination' => $pagination));
+    }
+
+    /**
+     * @Route("/search", name="search")
+     */
+    public function searchAction(Request $request)
+    {
+        $data = $request->request->all();
+
+        //var_dump($data);die();
+        $repo = $this->getDoctrine()
+            ->getRepository('MarmitonBundle:Receipts');
+        $query = $repo->createQueryBuilder('r')
+            ->where('r.name LIKE :name')
+            ->setParameter('name', '%'.$data['search'].'%')
+            ->getQuery();
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $query, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            8/*limit per page*/
+        );
+        return $this->render('MarmitonBundle:Default:receipes.html.twig', array('pagination'=>$pagination));
     }
 
     /**
@@ -106,4 +136,7 @@ class DefaultController extends Controller
             'ingredients' => $list_ingredient_array
         ]);
     }
+
+
+
 }

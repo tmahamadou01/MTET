@@ -15,11 +15,11 @@ parameters:
     mailer_user: ~
     mailer_password: ~
 
-    facebook_client_id: 342546787967
-    facebook_client_secret: 342546
+    facebook_client_id: 125167108071260
+    facebook_client_secret: fee62f254fd21ebfcdd9ac057c0b9c82
+    google_client_id: 684236925801-i0cbn35s2dcspbm3fj3djjcnmkkgm6tj.apps.googleusercontent.com
+    google_client_secret: bKQAwGROBHVjvYzMZ11wVLIj
 
-    google_client_id: 123123123
-    google_client_secret: 2342342342
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
